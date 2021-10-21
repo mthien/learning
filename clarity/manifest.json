@@ -1,0 +1,41 @@
+{
+    "name": "clarity",
+    "description": "A simple, and clear new tab page",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background":{
+        "service_worker": "./src/background.js"
+    },
+
+    "chrome_url_overrides": {
+        "newtab": "./src/new-tab.html"
+    },
+
+    "action": {
+        "default_title": "clarity",
+        "default_popup": "./src/popup.html",
+        "default_icon": {
+            "32": "/src/images/icon32.png",
+            "48": "/src/images/icon48.png",
+            "128": "/src/images/icon128.png"
+          }
+    },
+
+    "icons": {
+        "32": "/src/images/icon32.png",
+        "48": "/src/images/icon48.png",
+        "128": "/src/images/icon128.png"
+      },
+
+    "permissions": [
+        "search",
+        "storage",
+        "bookmarks",
+        "tts",
+        "downloads",
+        "power",
+        "tabCapture",
+        "sessions"
+    ]
+
+}
